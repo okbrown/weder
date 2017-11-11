@@ -1,0 +1,37 @@
+{
+  "swagger": "2.0",
+  "basePath": "/v1",
+  "info": {
+    "title": "Weather API",
+    "description": "",
+    "version": "1.0"
+  },
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths": {
+    "/weather/{location}": {
+      "get": {
+        "summary": "Return weather by location",
+        "tags": ["Location"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "location",
+            "in": "path",
+            "description": "Location e.g. mostly done by known areas like towns and cities",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Predicted weather by times"
+          },
+          "400": {
+            "description": "Location not found"
+          }
+        }
+      }
+    }
+  }
+}
