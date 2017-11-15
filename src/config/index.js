@@ -3,10 +3,8 @@
 import nconf from 'nconf';
 
 nconf.argv().env().defaults({
-	HOSTNAME: 'localhost',
-	PORT: 7901,
-	GEO_API: '',
-	GEO_KEY: ''
+	HOSTNAME: 'localhost:7902',
+	PORT: 7902
 });
 
 const getConfig = name => nconf.get(name);
