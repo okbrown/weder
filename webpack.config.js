@@ -30,10 +30,11 @@ module.exports = {
 								"module-resolver", {
 								"root": ["./src"],
 								"alias": {
-									"dao": "./src/dao",
-									"services": "./src/controllers/services",
-									"controllers": "./src/controllers",
-									"config": "./src/config"
+									"dao": "/dao",
+									"services": "/controllers/services",
+									"controllers": "/controllers",
+									"config": "/config",
+									"bbc-helpers": "/controllers/v1/weather/dao/bbc/helpers"
 								}
 							}
 							]
