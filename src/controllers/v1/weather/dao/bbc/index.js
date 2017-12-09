@@ -5,6 +5,7 @@ import get from 'lodash/get';
 import cheerio from 'cheerio';
 import dateFns from 'date-fns';
 import { getTextValues, getEachAttrib, _trim, _replace } from 'bbc-helpers';
+import { html } from '../../../../../test-data/bbc-test-data';
 
 
 const getBBCWeatherID = async (location) => {
@@ -67,7 +68,7 @@ const getForecast = async (location) => {
 	const date = dateFns.format(new Date(), 'YYYY-MM-DD');
 	const url = `http://www.bbc.co.uk/weather/en/${ id }/daily/${ date }?day=0`;
 	const data = await http(url, null, 'GET');
-	const $ = cheerio.load(data);
+	const $ = cheerio.load(html);
 	const weatherData = getWeatherData($);
 
 	return {

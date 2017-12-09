@@ -9,7 +9,6 @@ const weatherByTown = async (req, res) => {
 	res.json({ forecast });
 }
 
-
 export default {
 	weatherByTown
 }

@@ -10,7 +10,6 @@ const showExplorer = true;
 const options = {
 	validatorUrl: null,
 	docExpansion: 'none'
-
 };
 
 const api = express.Router();
