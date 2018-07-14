@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 import http from 'services/http-request';
 import get from 'lodash/get';
@@ -59,7 +59,7 @@ const getWeatherData = ($) => {
 		sunrise,
 		sunset,
 		weatherData
-	}
+	};
 }
 
 const getForecast = async (location) => {
@@ -74,7 +74,7 @@ const getForecast = async (location) => {
 	return {
 		location: name,
 		...weatherData
-	}
+	};
 }
 
-export default getForecast
+export default getForecast;
