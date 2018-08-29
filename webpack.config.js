@@ -33,6 +33,8 @@ module.exports = {
 									"dao": "/dao",
 									"services": "/controllers/services",
 									"controllers": "/controllers",
+									"middleware": "/controllers/v2/middleware",
+									"model": "controllers/v2/model",
 									"config": "/config",
 									"bbc-helpers": "/controllers/v1/weather/dao/bbc/helpers"
 								}

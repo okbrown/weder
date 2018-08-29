@@ -3,12 +3,17 @@
 import getForecast from './dao/bbc';
 
 const weatherByTown = async (req, res) => {
-
 	let { where } = req.params;
-	let forecast = await getForecast(where);
-	res.json({ forecast });
-}
+	try {
+		let forecast = await getForecast(where);
+		res.json({ forecast });
+	}
+	catch (err) {
+		console.log(err.message);
+		res.json({ err});
+	}
+};
 
 export default {
 	weatherByTown
-}
+};
